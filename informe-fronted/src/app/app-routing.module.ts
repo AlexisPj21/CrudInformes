@@ -7,7 +7,7 @@ const routes: Routes = [
   {path: 'opportunity' , component:OpportunityComponent},
   {path: 'opportunity/id', component:OpportunityComponent},
   {path: 'prospect', component:ProspectComponent},
-  {path: 'prospect/id', component:ProspectComponent}
+  {path: 'prospect/:id', component:ProspectComponent}
 ];
 
 @NgModule({

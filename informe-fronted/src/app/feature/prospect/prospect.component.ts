@@ -26,18 +26,18 @@ export class ProspectComponent implements OnInit {
 
   constructor(
     private prospectService: ProspectService,
-    private activatedRoute: ActivatedRoute
+    private activedRoute: ActivatedRoute
   )
 
   { }
 
   ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe(
+    this.activedRoute.paramMap.subscribe(
       (params) => {
-        let prospectId:string ="";
-        if(params.get("prospect_id")){
-          prospectId = params.get("prospect_id")!;
-          this.findById(parseInt(prospectId));
+        let id:string ="";
+        if(params.get("id")){
+          id = params.get("id")!;
+          this.findById(parseInt(id));
         }
       }
     )
@@ -59,8 +59,8 @@ export class ProspectComponent implements OnInit {
     }
   })
   }
-  findById(prospectId: number): void{
-    this.prospectService.findById(prospectId)
+  findById(id: number): void{
+    this.prospectService.findById(id)
     .subscribe(
       (response:Prospect)=>{
         this.currentProspect = response;
