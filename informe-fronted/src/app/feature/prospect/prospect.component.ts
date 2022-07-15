@@ -42,6 +42,7 @@ export class ProspectComponent implements OnInit {
       }
     )
   }
+  //hola
   save ():void{
     this.prospectService.save(this.currentProspect)
     .subscribe((response) => {console.log("registro guardado");
