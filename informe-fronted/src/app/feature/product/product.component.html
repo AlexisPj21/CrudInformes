@@ -1,0 +1,32 @@
+<div class="grid justify-center mt-4 gap-2">
+  <div class="card card-compact w-96 glass bg-base-100 shadow-2xl shadow-teal-300">
+    <div class="card-body">
+      <h2 class="card-title justify-center font-bold uppercase">Crud de <span class="text-blue-600">Productos</span>
+      </h2>
+      <div class="grid ">
+        <label for="">Nombre:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" placeholder="Ejemplo: Fundas" [(ngModel)]="currentProduct.name">
+        <label for="">Descripcion:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" placeholder="Ejemplo: 100 unidades"[(ngModel)]="currentProduct.description">
+        <label for="">Marca:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" placeholder="Ejemplo: Nike"[(ngModel)]="currentProduct.brand">
+        <label for="">Modelo:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentProduct.model">
+        <label for="">Fecha de creación:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentProduct.created">
+        <label for="">Fecha de actualización:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="date" [(ngModel)]="currentProduct.updated">
+        <div class="form-control">
+          <label class="label cursor-pointer justify-start">
+            <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentProduct.enable"/>
+            <span class="label-text ml-4">Activo</span>
+          </label>
+        </div>
+      </div>
+      <div class="card-actions justify-end">
+        <button class="btn  btn-primary" (click)="save()">Guardar</button>
+        <button class="btn   btn-accent">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

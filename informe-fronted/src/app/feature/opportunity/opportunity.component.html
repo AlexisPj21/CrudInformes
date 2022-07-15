@@ -3,8 +3,16 @@
     <div class="card-body">
       <h2 class="card-title justify-center font-bold uppercase">Crud de <span class="text-primary">oportunidad</span></h2>
       <div class="grid">
-        <label for="">Monto a ingresar:</label>
-        <input class="input input-primary mb-4" type="text" placeholder="Ejemplo: 325412" [(ngModel)]="currentOpportunity.amount">
+        <label for="">Prospecto:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentOpportunity.prospectId">
+        <label for="">Etapa:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentOpportunity.stageId">
+        <label for="">Vendedor:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentOpportunity.vendorId">
+        <label for="">Campaña:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" [(ngModel)]="currentOpportunity.campaignId">
+        <label for="">Monto:</label>
+        <input class="input input-bordered input-info w-full max-w-xs" type="text" placeholder="Ejemplo: 36512" [(ngModel)]="currentOpportunity.amount">
         <label for="">Fecha de Creación:</label>
         <input class="input input-primary mb-2" type="date" placeholder="2022-07-13" [(ngModel)]="currentOpportunity.created">
         <label for="">Fecha de Actualización:</label>

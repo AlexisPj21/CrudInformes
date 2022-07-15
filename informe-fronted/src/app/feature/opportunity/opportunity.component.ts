@@ -18,7 +18,7 @@ export class OpportunityComponent implements OnInit {
     amount: 0,
     created: new Date(),
     updated: new Date(),
-    enable: true
+    enable: false
   }
 
   constructor(
@@ -50,7 +50,7 @@ export class OpportunityComponent implements OnInit {
       amount: 0,
       created: new Date(),
       updated: new Date(),
-      enable: true
+      enable: false
     }
   })
   }
