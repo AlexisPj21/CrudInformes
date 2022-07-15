@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { OpportunityComponent } from './feature/opportunity/opportunity.component';
+import { ProductComponent } from './feature/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OpportunityComponent
+    OpportunityComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
