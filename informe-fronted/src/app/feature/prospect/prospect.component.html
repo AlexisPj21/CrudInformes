@@ -1,0 +1,35 @@
+<div class="grid justify-center  mt-6 gap-2">
+  <div class="card card-compact bg-base-100 shadow-2xl shadow-black">
+    <div class="card-body">
+      <h2 class="card-title justify-center font-bold uppercase">Crud de <span class="text-primary">Prospecto</span></h2>
+      <div class="grid">
+        <label for="">Nombre:</label>
+        <input class="input input-primary mb-4" type="text" placeholder="Darling Ortiz" [(ngModel)]="currentProspect.name">
+        <label for="">Identificación:</label>
+        <input class="input input-primary mb-4" type="number" placeholder="1234567890" [(ngModel)]="currentProspect.dni">
+        <label for="">Origen:</label>
+        <input class="input input-primary mb-4" type="text" [(ngModel)]="currentProspect.source" >
+        <label for="">Telefono:</label>
+        <input class="input input-primary mb-4" type="number" placeholder="0998158392" [(ngModel)]="currentProspect.phone">
+        <label for="">Dirección:</label>
+        <input class="input input-primary mb-4" type="text" placeholder="OE5N-Miguel Ponton" [(ngModel)]="currentProspect.address">
+        <label for="">Fecha de Creación:</label>
+        <input class="input input-primary mb-2" type="date" placeholder="2022-07-13" [(ngModel)]="currentProspect.created">
+        <label for="">Fecha de Actualización:</label>
+        <input class="input input-primary mb-2" type="date" placeholder="2022-07-13" [(ngModel)]="currentProspect.updated">
+        <label for="">Correo:</label>
+        <input class="input input-primary mb-4" type="text" placeholder="nombre@gmail.com" [(ngModel)]="currentProspect.mail">
+        <div class="form-control">
+          <label class="label cursor-pointer">
+            <input type="checkbox" class="toggle toggle-primary" checked [(ngModel)]="currentProspect.enable" />
+            <span class="label-text ml-4">Activo</span>
+          </label>
+           </div>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary btn-sm" (click)="save()">Guardar</button>
+        <button class="btn btn-secondary btn-sm">Cancelar</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
