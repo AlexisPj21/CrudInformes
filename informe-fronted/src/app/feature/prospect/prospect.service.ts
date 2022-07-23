@@ -12,7 +12,7 @@ export class ProspectService {
     headers: new HttpHeaders({"Content-Type":"application/json"})
   }
 
-  private url ="http://localhost:8080/api/prospect";
+  private url ="http://localhost:8080/api/prospect"
 
   constructor(
     private http: HttpClient

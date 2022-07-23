@@ -7,6 +7,7 @@ import { OpportunityComponent } from './opportunity/opportunity.component';
 import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { PersonComboboxComponent } from './person/person-combobox/person-combobox.component';
+import { ProspectComponent } from './prospect/prospect.component';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { PersonComboboxComponent } from './person/person-combobox/person-combobo
   CampaignComponent,
   OpportunityComponent,
   ProductComponent,
-  ProductComponent,
+  ProspectComponent,
   PersonComboboxComponent
   ],
   imports: [
