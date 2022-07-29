@@ -19,8 +19,16 @@ public class OpportunityService {
         return opportunityRepository.findById(id).orElse(new Opportunity());
     }
 
+    public void deleteByID(long id){
+        opportunityRepository.deleteById(id);
+    }
+
     public List <Opportunity> findAll(){
         return opportunityRepository.findAll();
+    }
+
+    public List <Opportunity> findByDescription(String string){
+        return opportunityRepository.findByDescriptionLikeIgnoreCase(string);
     }
     
 }

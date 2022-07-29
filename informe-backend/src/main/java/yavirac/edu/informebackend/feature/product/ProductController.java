@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import yavirac.edu.informebackend.feature.opportunity.OpportunityService;
+
 @RestController
 @CrossOrigin({"*"})
 @RequestMapping("/api/product")
@@ -24,7 +26,7 @@ public class ProductController {
         return productService.save(product);
     }
 
-    @GetMapping({"/{id}"})
+    @GetMapping({"/findById/{id}"})
     public Product findById(@PathVariable long id) {
         return productService.findById(id);
     }
@@ -37,24 +39,10 @@ public class ProductController {
     @GetMapping("/all")
     public List<Product>findAll(){
         return productService.findAll();
-}
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @GetMapping("/findByName/{term}")
+    public List<Product> findByProduct(@PathVariable String term){
+        return productService.findByName(term);
+    }
 }

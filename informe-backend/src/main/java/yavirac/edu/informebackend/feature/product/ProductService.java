@@ -24,4 +24,8 @@ public class ProductService {
     public List<Product>findAll(){
         return productRepository.findAll();
     }
+
+    public List<Product> findByName(String term){
+        return productRepository.findByNameLikeIgnoreCase(term+"%");
+    }
 }

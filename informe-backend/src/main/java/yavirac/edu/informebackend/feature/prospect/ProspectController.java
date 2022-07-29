@@ -36,7 +36,7 @@ public class ProspectController {
         return prospectService.save(prospect);
     }
 
-    @GetMapping("/all")
+    @GetMapping("/findAll")
     public List<Prospect> findAll(){
         return prospectService.findAll();
     }
