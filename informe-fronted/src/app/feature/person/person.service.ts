@@ -18,7 +18,17 @@ export class PersonService {
 
   private url:string = "http://localhost:8080/api/person";
 
+
+  public findById(id:number):Observable<Person>{
+    return this.http.get<Person>(this.url+"/findById/"+id, this.httpOptions);
+  }
+
   public findAll():Observable<Person[]>{
     return this.http.get<Person[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByName(term: string):Observable<Person[]>{
+    return this.http.get<Person[]>(this.url+"/findByName/"+term, this.httpOptions);
+
   }
 }

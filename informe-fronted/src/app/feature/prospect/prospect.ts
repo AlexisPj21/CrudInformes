@@ -1,3 +1,4 @@
+import { Person } from '../person/person';
 export interface Prospect {
 
   prospectId: number,
@@ -9,7 +10,9 @@ export interface Prospect {
   mail: string,
   created: Date,
   updated: Date,
-  enable: boolean
+  enable: boolean,
+  personId:number,
+  person:Person[]
 
 }
 
