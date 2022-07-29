@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FeatureRoutingModule } from './feature-routing.module';
 import { CampaignComponent } from './campaign/campaign.component';
 import { OpportunityComponent } from './opportunity/opportunity-form/opportunity.component';
-import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { PersonComboboxComponent } from './person/person-combobox/person-combobox.component';
 import { ProspectComponent } from './prospect/prospect.component';
@@ -13,6 +11,9 @@ import { OpportunityToolbarComponent } from './opportunity/opportunity-toolbar/o
 import { ProspectComboboxComponent } from './prospect/prospect-combobox/prospect-combobox.component';
 import { ProductSearchComponent } from './product/product-search/product-search.component';
 
+import { ProductComponent } from './product/form/product.component';
+import { ProductListComponent } from './product/list/product-list.component';
+import { ProductToolbarComponent } from './product/product-toolbar/product-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,8 @@ import { ProductSearchComponent } from './product/product-search/product-search.
   OpportunityToolbarComponent,
   OpportunityListComponent,
   ProspectComboboxComponent,
+  ProductListComponent,
+  ProductToolbarComponent,
   ProductSearchComponent
   ],
   imports: [

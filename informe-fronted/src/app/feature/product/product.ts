@@ -1,4 +1,8 @@
+import { Person } from "../person/person";
+import { ProductRelated } from "./product-related";
+
 export interface Product {
+
   productId: number,
   name: string,
   description: string,
@@ -6,6 +10,13 @@ export interface Product {
   model: string,
   created: Date,
   updated: Date,
-  enable: boolean
+  enable: boolean,
+  personId: number,
+  //persons: Person[],
+  products: ProductRelated[]
+
+
+
+
 
 }

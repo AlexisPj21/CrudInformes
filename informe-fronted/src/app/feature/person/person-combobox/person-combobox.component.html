@@ -1,8 +1,8 @@
 <select #personSelect class="select w-full max-w-xs select-primary" (change)="onChange(personSelect.value)">
-  <option disabled selected>Seleccione la ciudad</option>
+  <option disabled selected>Seleccione el origen</option>
   <option *ngFor="let person of people"
-  [value]="person.id"
-  [selected]="person.id === idInput"
+  [value]="person.personId"
+  [selected]="person.personId === idInput"
   >
       {{person.name}}
   </option>

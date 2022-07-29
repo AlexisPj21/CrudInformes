@@ -36,13 +36,13 @@ public class ProductController {
         return productService.save(product);
     }
 
-    @GetMapping("/all")
-    public List<Product>findAll(){
+    @GetMapping("/findAll")
+    public List findAll(){
         return productService.findAll();
-    }
+    }   
 
     @GetMapping("/findByName/{term}")
-    public List<Product> findByProduct(@PathVariable String term){
-        return productService.findByName(term);
+    public List<Product>findByName(@PathVariable String term){
+       return productService.findByName(term+"%");
     }
 }
