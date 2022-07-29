@@ -4,6 +4,8 @@ import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { OpportunityComponent } from '../feature/opportunity/opportunity-form/opportunity.component';
 import { OpportunityListComponent } from '../feature/opportunity/opportunity-list/opportunity-list.component';
+import { ProspectListComponent } from '../feature/prospect/list/prospect-list.component';
+import { ProspectComponent } from '../feature/prospect/form/prospect.component';
 
 import { ProductComponent } from '../feature/product/form/product.component';
 import { ProductListComponent } from '../feature/product/list/product-list.component';
@@ -16,6 +18,9 @@ const routes: Routes = [
     {path: 'opportunity-list', component:OpportunityListComponent},
     {path: 'opportunity-form', component:OpportunityComponent},
     {path: 'opportunity-form/:id', component:OpportunityComponent},
+    {path: 'prospect-list',component:ProspectListComponent},
+    {path: 'prospect-form',component:ProspectComponent},
+    {path: 'prospect-form/:id',component:ProspectComponent},
 
 
     {path: 'product-list',component:ProductListComponent},

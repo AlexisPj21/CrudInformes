@@ -40,6 +40,11 @@ public class ProspectController {
     public List<Prospect> findAll(){
         return prospectService.findAll();
     }
+
+    @GetMapping("/findByName/{term}")
+    public List<Prospect>findByName(@PathVariable String term){
+       return prospectService.findByName(term+"%");
+    }
     
     
 }

@@ -22,12 +22,16 @@ export class ProspectService {
     return this.http.post<Prospect>(this.url+"/save",prospect, this.httpOptions);
 
   }
+
   public findById(id:number):Observable<Prospect>{
     return this.http.get<Prospect>(this.url+"/"+id, this.httpOptions);
   }
 
-  public findAll(): Observable<Prospect[]>{
-    return this.http.get<Prospect[]>(this.url+"/findAll", this.httpOptions);
+  public findAll():Observable<Prospect[]>{
+    return this.http.get<Prospect[]>(this.url+"/findAll",  this.httpOptions);
   }
 
+  public findByName(term:string):Observable<Prospect[]>{
+    return this.http.get<Prospect[]>(this.url+"/findByName/"+term, this.httpOptions);
+  }
 }

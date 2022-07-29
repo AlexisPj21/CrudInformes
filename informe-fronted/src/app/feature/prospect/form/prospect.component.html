@@ -1,0 +1,126 @@
+<app-prospect-toolbar [item]="currentProspect.name"></app-prospect-toolbar>
+<div class="grid justify-center mt-6 gap-2">
+  <div class="card card-compact bg-base-100 shadow-2xl shadow-black">
+    <div class="card-body">
+      <h2 class="card-title justify-center font-bold uppercase">
+        Crud de <span class="text-primary">Prospecto</span>
+      </h2>
+      <div class="grid">
+        <label for="">Nombre:</label>
+        <input
+          class="input input-primary mb-4"
+          type="text"
+          placeholder="Darling Ortiz"
+          [(ngModel)]="currentProspect.name"
+        />
+        <label for="">Identificación:</label>
+        <input
+          class="input input-primary mb-4"
+          type="number"
+          placeholder="1234567890"
+          [(ngModel)]="currentProspect.dni"
+        />
+        <label for="">Origen:</label>
+
+        <input
+          class="input input-primary mb-4"
+          type="text"
+          [(ngModel)]="currentProspect.source"
+        />
+        <label for="">Telefono:</label>
+        <input
+          class="input input-primary mb-4"
+          type="number"
+          placeholder="0998158392"
+          [(ngModel)]="currentProspect.phone"
+        />
+        <label for="">Dirección:</label>
+        <input
+          class="input input-primary mb-4"
+          type="text"
+          placeholder="OE5N-Miguel Ponton"
+          [(ngModel)]="currentProspect.address"
+        />
+        <label for="">Fecha de Creación:</label>
+        <input
+          class="input input-primary mb-2"
+          type="date"
+          placeholder="2022-07-13"
+          [(ngModel)]="currentProspect.created"
+        />
+        <label for="">Fecha de Actualización:</label>
+        <input
+          class="input input-primary mb-2"
+          type="date"
+          placeholder="2022-07-13"
+          [(ngModel)]="currentProspect.updated"
+        />
+        <label for="">Correo:</label>
+        <input
+          class="input input-primary mb-4"
+          type="text"
+          placeholder="nombre@gmail.com"
+          [(ngModel)]="currentProspect.mail"
+        />
+        <div class="form-control">
+          <label class="label cursor-pointer">
+            <input
+              type="checkbox"
+              class="toggle toggle-primary"
+              checked
+              [(ngModel)]="currentProspect.enable"
+            />
+            <span class="label-text ml-4">Activo</span>
+          </label>
+        </div>
+        <div>
+          <app-person-combobox
+            [idInput]="currentProspect.personId"
+            (currentPersonId)="currentProspect.personId = $event"
+          ></app-person-combobox>
+        </div>
+        <div class="divider my-0"></div>
+
+          <table class="table table-compact w-full">
+            <thead>
+              <tr>
+                <th>Referidos</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let person of currentProspect.person">
+                <td>{{person.name}}</td>
+                <td>
+                  <a (click)="removePerson(person.personId)">
+                   <svg class="w-4 h-4" fill="red" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                      <path d="M490.667,96c0-17.673-14.327-32-32-32h-80.555C364.632,25.757,328.549,0.13,288,0h-64   c-40.549,0.13-76.632,25.757-90.112,64H53.333c-17.673,0-32,14.327-32,32l0,0c0,17.673,14.327,32,32,32H64v266.667   C64,459.468,116.532,512,181.333,512h149.333C395.468,512,448,459.468,448,394.667V128h10.667   C476.34,128,490.667,113.673,490.667,96z M384,394.667C384,424.122,360.122,448,330.667,448H181.333   C151.878,448,128,424.122,128,394.667V128h256V394.667z"/>
+                      <path d="M202.667,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C170.667,369.673,184.994,384,202.667,384z"/>
+                      <path d="M309.333,384c17.673,0,32-14.327,32-32V224c0-17.673-14.327-32-32-32s-32,14.327-32,32v128   C277.333,369.673,291.66,384,309.333,384z"/>
+                    </g>
+                    </svg>
+                </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                <app-person-search (personEmiter)="onSelect($event)"></app-person-search>
+              </td>
+              <td></td>
+              </tr>
+            </tbody>
+          </table>
+
+        <div class="divider my-0"></div>
+
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary btn-sm" (click)="save()">
+            Guardar
+          </button>
+          <button class="btn btn-secondary btn-sm">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

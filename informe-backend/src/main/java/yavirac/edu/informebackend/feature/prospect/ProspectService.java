@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
+
 @Service
 public class ProspectService {
 
@@ -21,6 +23,10 @@ public class ProspectService {
     }
     public List<Prospect>findAll(){
         return prospectRepository.findAll();
+    }
+
+    public List<Prospect> findByName(String term){
+        return prospectRepository.findByNameLikeIgnoreCase(term+"%");
     }
     
 }
