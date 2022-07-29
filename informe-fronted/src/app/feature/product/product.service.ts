@@ -24,7 +24,11 @@ export class ProductService{
   }
 
   //read
-  public findById(productId:number): Observable<Product>{
-    return this.http.get<Product>(this.url+"/"+productId, this.httpOptions);
+  public findById(id: number): Observable<Product>{
+    return this.http.get<Product>(this.url+"/findById/"+id, this.httpOptions);
+  }
+
+  public findByName(term: string): Observable<Product[]>{
+    return this.http.get<Product[]>(this.url+"/findByName/"+term, this.httpOptions);
   }
 }

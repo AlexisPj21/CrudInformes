@@ -1,0 +1,9 @@
+<select #prospectSelect class="select w-full max-w-xs select-primary" (change)="onChange(prospectSelect.value)">
+  <option disabled selected>Seleccione el prospecto</option>
+  <option *ngFor="let prospect of prospects"
+  [value]="prospect.prospectId"
+  [selected]="prospect.prospectId === idInput"
+  >
+      {{prospect.name}}
+  </option>
+</select>

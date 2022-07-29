@@ -25,4 +25,9 @@ export class ProspectService {
   public findById(id:number):Observable<Prospect>{
     return this.http.get<Prospect>(this.url+"/"+id, this.httpOptions);
   }
+
+  public findAll(): Observable<Prospect[]>{
+    return this.http.get<Prospect[]>(this.url+"/findAll", this.httpOptions);
+  }
+
 }

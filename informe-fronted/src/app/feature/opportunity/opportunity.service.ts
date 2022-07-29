@@ -26,4 +26,17 @@ export class OpportunityService {
     return this.http.get<Opportunity>(this.url+"/"+id,this.httpOptions);
   }
 
+  public deleteById(id: number): Observable<void>{
+    console.log(id);
+    return this.http.delete<void>(this.url+"/delete/"+id, this.httpOptions);
+  }
+
+  public findAll(): Observable<Opportunity[]>{
+    return this.http.get<Opportunity[]>(this.url+"/findAll", this.httpOptions);
+  }
+
+  public findByDescription(term: string): Observable<Opportunity[]>{
+    return this.http.get<Opportunity[]>(this.url+"/findByDescription/"+term, this.httpOptions);
+  }
+
 }
