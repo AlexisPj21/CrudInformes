@@ -1,13 +1,13 @@
 package yavirac.edu.informebackend.feature.product;
-
 import java.sql.Timestamp;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
-
 import lombok.Data;
-
 @Data
 @Table("products")
 public class Product {
@@ -23,5 +23,9 @@ public class Product {
     private Timestamp updated;
     private boolean enable;
     private String image;
+    private Long personId;
+
+    @MappedCollection(idColumn = "product_id")
+    private Set<ProductRelated>person = new HashSet<>();
     
 }
