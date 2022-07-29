@@ -49,8 +49,8 @@ export class ProspectComponent implements OnInit {
   }
   )
   }
-  findById(id: number): void{
-    this.prospectService.findById(id)
+  findById(prospectId: number): void{
+    this.prospectService.findById(prospectId)
     .subscribe(
       (response:Prospect)=>{
         this.currentProspect = response;
